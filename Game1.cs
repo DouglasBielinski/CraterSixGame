@@ -20,7 +20,9 @@ namespace CraterSix
         SpriteBatch spriteBatch;
         Camera camera;
 
-        VertexPositionColor[] verts;
+        Texture2D texture;
+
+        VertexPositionTexture[] verts;
         VertexBuffer vertexBuffer;
         BasicEffect effect;
         Matrix worldTranslation = Matrix.Identity;
@@ -59,14 +61,21 @@ namespace CraterSix
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            texture = Content.Load<Texture2D>(@"Resources\test");
             // Initialize vertices
-            verts = new VertexPositionColor[3];
-            verts[0] = new VertexPositionColor(new Vector3(0, 1, 0), Color.Blue);
-            verts[1] = new VertexPositionColor(new Vector3(1, -1, 0), Color.Red);
-            verts[2] = new VertexPositionColor(new Vector3(-1, -1, 0), Color.Green);
+            verts = new VertexPositionTexture[4];
+            verts[0] = new VertexPositionTexture(
+                new Vector3(-1, 1, 0), new Vector2(0, 0));
+            verts[1] = new VertexPositionTexture(
+                new Vector3(1, 1, 0), new Vector2(1, 0));
+            verts[2] = new VertexPositionTexture(
+                new Vector3(-1, -1, 0), new Vector2(0, 1));
+            verts[3] = new VertexPositionTexture(
+                new Vector3(1, -1, 0), new Vector2(1, 1));
 
             // Set vertex data in VertexBuffer
-            vertexBuffer = new VertexBuffer(GraphicsDevice, typeof(VertexPositionColor), verts.Length, BufferUsage.None);
+            vertexBuffer = new VertexBuffer(GraphicsDevice, typeof(VertexPositionTexture),
+                verts.Length, BufferUsage.None);
             vertexBuffer.SetData(verts);
 
             // Initialize the BasicEffect
@@ -104,7 +113,11 @@ namespace CraterSix
             if (keyboardState.IsKeyDown(Keys.Right))
                 worldTranslation *= Matrix.CreateTranslation(.01f, 0, 0);
             // Rotation
-            worldRotation *= Matrix.CreateRotationY(MathHelper.PiOver4 / 60);
+            worldRotation *= Matrix.CreateFromYawPitchRoll(
+                MathHelper.PiOver4 / 60,
+                0,
+                0);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -124,14 +137,15 @@ namespace CraterSix
             effect.World = worldRotation * worldTranslation * worldRotation;
             effect.View = camera.view;
             effect.Projection = camera.projection;
-            effect.VertexColorEnabled = true;
+            effect.Texture = texture;
+            effect.TextureEnabled = true;
 
             // Begin effect and draw for each pass
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
                 pass.Apply();
-                GraphicsDevice.DrawUserPrimitives<VertexPositionColor>
-                (PrimitiveType.TriangleStrip, verts, 0, 1);
+                GraphicsDevice.DrawUserPrimitives<VertexPositionTexture>
+                    (PrimitiveType.TriangleStrip, verts, 0, 2);
             }
 
             base.Draw(gameTime);
