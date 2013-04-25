@@ -28,7 +28,7 @@ namespace CraterSix
         float speed = 3;
 
         MouseState prevMouseState;
-        
+
 
         public Camera(Game game, Vector3 pos, Vector3 target, Vector3 up)
             : base(game)
@@ -44,7 +44,7 @@ namespace CraterSix
             MathHelper.PiOver4,
             (float)Game.Window.ClientBounds.Width /
             (float)Game.Window.ClientBounds.Height,
-            1, 100);
+            1, 3000);
         }
 
         private void CreateLookAt()
@@ -74,30 +74,32 @@ namespace CraterSix
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
+            if (gameTime.ElapsedGameTime.Milliseconds % 1000 == 0)
+                Console.WriteLine("Camera Location: " + cameraPosition);
             // TODO: Add your update code here
             if (Keyboard.GetState().IsKeyDown(Keys.W))
                 cameraPosition += cameraDirection * speed;
             if (Keyboard.GetState().IsKeyDown(Keys.S))
                 cameraPosition -= cameraDirection * speed;
             // Move side to side
-            if (Keyboard.GetState( ).IsKeyDown(Keys.A))
+            if (Keyboard.GetState().IsKeyDown(Keys.A))
                 cameraPosition += Vector3.Cross(cameraUp, cameraDirection) * speed;
-            if (Keyboard.GetState( ).IsKeyDown(Keys.D))
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
                 cameraPosition -= Vector3.Cross(cameraUp, cameraDirection) * speed;
 
             // Yaw rotation
             cameraDirection = Vector3.Transform(cameraDirection,
                 Matrix.CreateFromAxisAngle(cameraUp, (-MathHelper.PiOver4 / 150) *
-                (Mouse.GetState( ).X - prevMouseState.X)));
+                (Mouse.GetState().X - prevMouseState.X)));
 
             // Roll rotation
-            if (Mouse.GetState( ).LeftButton == ButtonState.Pressed)
+            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
             {
                 cameraUp = Vector3.Transform(cameraUp,
                     Matrix.CreateFromAxisAngle(cameraDirection,
                     MathHelper.PiOver4 / 45));
             }
-            if (Mouse.GetState( ).RightButton == ButtonState.Pressed)
+            if (Mouse.GetState().RightButton == ButtonState.Pressed)
             {
                 cameraUp = Vector3.Transform(cameraUp,
                     Matrix.CreateFromAxisAngle(cameraDirection,
@@ -108,14 +110,14 @@ namespace CraterSix
             cameraDirection = Vector3.Transform(cameraDirection,
                 Matrix.CreateFromAxisAngle(Vector3.Cross(cameraUp, cameraDirection),
                 (MathHelper.PiOver4 / 100) *
-                (Mouse.GetState( ).Y - prevMouseState.Y)));
+                (Mouse.GetState().Y - prevMouseState.Y)));
             cameraUp = Vector3.Transform(cameraUp,
                 Matrix.CreateFromAxisAngle(Vector3.Cross(cameraUp, cameraDirection),
                 (MathHelper.PiOver4 / 100) *
-                (Mouse.GetState( ).Y - prevMouseState.Y)));
+                (Mouse.GetState().Y - prevMouseState.Y)));
 
             // Reset prevMouseState
-            prevMouseState = Mouse.GetState( );
+            prevMouseState = Mouse.GetState();
 
             // Recreate the camera view matrix
             CreateLookAt();

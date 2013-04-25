@@ -18,9 +18,11 @@ namespace CraterSix
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Camera camera;
+        public Camera camera { get; protected set; }
 
         Texture2D texture;
+
+        ModelManager modelManager;
 
         VertexPositionTexture[] verts;
         VertexBuffer vertexBuffer;
@@ -44,7 +46,7 @@ namespace CraterSix
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            Console.WriteLine("Game initializing... ");
             base.Initialize();
             // Initialize camera
             camera = new Camera(this, new Vector3(0, 0, 5),
@@ -60,6 +62,10 @@ namespace CraterSix
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            //Time for models
+            modelManager = new ModelManager(this);
+            Components.Add(modelManager);
 
             texture = Content.Load<Texture2D>(@"Resources\test");
             // Initialize vertices
@@ -107,7 +113,7 @@ namespace CraterSix
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
             // Translation
-            KeyboardState keyboardState = Keyboard.GetState( );
+            KeyboardState keyboardState = Keyboard.GetState();
             if (keyboardState.IsKeyDown(Keys.Left))
                 worldTranslation *= Matrix.CreateTranslation(-.01f, 0, 0);
             if (keyboardState.IsKeyDown(Keys.Right))
