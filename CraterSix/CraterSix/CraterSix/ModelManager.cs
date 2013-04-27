@@ -18,11 +18,14 @@ namespace CraterSix
     public class ModelManager :DrawableGameComponent //: Microsoft.Xna.Framework.GameComponent
     {
         List<BasicModel> models = new List<BasicModel>();
+        public int modelCount { get; protected set; }
+        Boolean firstModel = true;
 
         public ModelManager(Game game)
             : base(game)
         {
             // TODO: Construct any child components here
+            this.modelCount = models.Count;
         }
 
         /// <summary>
@@ -39,8 +42,8 @@ namespace CraterSix
         protected override void LoadContent()
         {
             //FIX HERE: Doesn't actually load the model
-            //models.Add(new BasicModel(
-            //Game.Content.Load<Model>(@"Resources\Models\badship")));
+            Console.WriteLine("Test Line! Print Me!");
+
             base.LoadContent();
         }
 
@@ -55,11 +58,20 @@ namespace CraterSix
             {
                 models[i].Update();
             }
-            if (gameTime.ElapsedGameTime.Milliseconds % 2 == 0)
-                Console.WriteLine("Model Count: " + models.Count);
+
+            if (firstModel)
+            {
+                models.Add(new Enemy(
+                    Game.Content.Load<Model>(@"Resources\Models\Ships\badship")));
+                firstModel = false;
+            }
+
+            if (gameTime.TotalGameTime.Milliseconds % 1000 == 0)
+                Console.WriteLine("Models Count: " + models.Count);
 
             base.Update(gameTime);
         }
+
         public override void Draw(GameTime gameTime)
         {
             // Loop through and draw each model

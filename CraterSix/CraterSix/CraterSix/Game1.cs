@@ -21,8 +21,10 @@ namespace CraterSix
         public Camera camera { get; protected set; }
 
         Texture2D texture;
-
+        Texture2D stars;
+        SpriteFont hudFont;
         ModelManager modelManager;
+        public Random rnd { get; protected set; }
 
         VertexPositionTexture[] verts;
         VertexBuffer vertexBuffer;
@@ -30,10 +32,16 @@ namespace CraterSix
         Matrix worldTranslation = Matrix.Identity;
         Matrix worldRotation = Matrix.Identity;
 
-
         public Game1()
         {
+            rnd = new Random();
+
             graphics = new GraphicsDeviceManager(this);
+            this.graphics.PreferredBackBufferWidth = 1280;
+            this.graphics.PreferredBackBufferHeight = 1040;
+
+            this.graphics.IsFullScreen = true;
+
             Content.RootDirectory = "Content";
         }
 
@@ -67,7 +75,9 @@ namespace CraterSix
             modelManager = new ModelManager(this);
             Components.Add(modelManager);
 
+            hudFont = Content.Load<SpriteFont>(@"SpriteFont1");
             texture = Content.Load<Texture2D>(@"Resources\test");
+            stars = Content.Load<Texture2D>(@"Resources\stars");
             // Initialize vertices
             verts = new VertexPositionTexture[4];
             verts[0] = new VertexPositionTexture(
@@ -112,6 +122,10 @@ namespace CraterSix
             // Allows the game to exit
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
+
+            if (gameTime.TotalGameTime.Milliseconds % 1000 == 0)
+                Console.WriteLine("Game Time: " + gameTime.TotalGameTime.Seconds+"s");
+
             // Translation
             KeyboardState keyboardState = Keyboard.GetState();
             if (keyboardState.IsKeyDown(Keys.Left))
@@ -146,6 +160,13 @@ namespace CraterSix
             effect.Texture = texture;
             effect.TextureEnabled = true;
 
+            spriteBatch.Begin(SpriteSortMode.FrontToBack, BlendState.AlphaBlend, null, null, null);
+            //Draw background
+            spriteBatch.Draw(stars, new Rectangle(0, 0, 1280, 1040), Color.White);
+
+            //Draw HUD
+            drawHud(gameTime);
+            spriteBatch.End();
             // Begin effect and draw for each pass
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
@@ -155,6 +176,14 @@ namespace CraterSix
             }
 
             base.Draw(gameTime);
+        }
+
+        protected void drawHud(GameTime gameTime)
+        {
+            //Time Elapsed
+            spriteBatch.DrawString(hudFont, ("Time Elapsed: " + gameTime.TotalGameTime.Seconds), new Vector2(0, 0), Color.Yellow);
+            //Models
+            spriteBatch.DrawString(hudFont, ("Models: " + modelManager.modelCount), new Vector2(0, 20), Color.Yellow);
         }
     }
 }
