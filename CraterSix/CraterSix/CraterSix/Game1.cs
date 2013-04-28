@@ -180,10 +180,21 @@ namespace CraterSix
 
         protected void drawHud(GameTime gameTime)
         {
+            //Look at this, it's flashing!
+            if(gameTime.TotalGameTime.Milliseconds % 500 != 0)
+                spriteBatch.DrawString(hudFont, ("Press 'K' to toggle between mouse and keyboard look!"), new Vector2(500, 950), Color.Yellow);
             //Time Elapsed
             spriteBatch.DrawString(hudFont, ("Time Elapsed: " + gameTime.TotalGameTime.Seconds), new Vector2(0, 0), Color.Yellow);
             //Models
             spriteBatch.DrawString(hudFont, ("Models: " + modelManager.modelCount), new Vector2(0, 20), Color.Yellow);
+            spriteBatch.DrawString(hudFont, ("MouseMovement: " + camera.mouseMovement), new Vector2(0, 40), Color.Yellow);
+            spriteBatch.DrawString(hudFont, ("MouseState: " + camera.prevMouseState), new Vector2(0, 60), Color.Yellow);
+            spriteBatch.DrawString(hudFont, ("Camera UP: " + MathHelper.ToDegrees(camera.cameraUp.X) + 
+                " "+MathHelper.ToDegrees(camera.cameraUp.Y)+
+                " " + MathHelper.ToDegrees(camera.cameraUp.Z)), new Vector2(0, 80), Color.Yellow);
+            spriteBatch.DrawString(hudFont, ("Camera DIRECTION: " + MathHelper.ToDegrees(camera.cameraDirection.X) +
+                " " + MathHelper.ToDegrees(camera.cameraDirection.Y) +
+                " " + MathHelper.ToDegrees(camera.cameraDirection.Z)), new Vector2(0, 100), Color.Yellow);
         }
     }
 }
