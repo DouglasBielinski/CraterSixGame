@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Resources\test.png</Source>
+      <Name>Resources\test</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\test.xnb</Output>
+      <Time>2013-04-16T12:08:27.3265696-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\stars.jpg</Source>
+      <Name>Resources\stars</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\stars.xnb</Output>
+      <Time>2013-04-27T08:49:10.6422443-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\badship.fbx</Source>
+      <Name>Resources\Models\Ships\badship</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\badship.xnb</Output>
+      <Time>2013-04-20T14:36:13.2595802-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Resources\Models\Ships\badship_0.xml</Key>
+        <Value>2013-04-27T16:33:11.5642446-07:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>SpriteFont1.spritefont</Source>
+      <Name>SpriteFont1</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2013-04-25T11:26:43.171205-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\spaceship.x</Source>
+      <Name>Resources\Models\Ships\spaceship</Name>
+      <Importer>XImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\spaceship.xnb</Output>
+      <Time>2013-04-26T14:11:30.345428-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Resources\Models\Ships\spaceship_0.xml</Key>
+        <Value>2013-04-27T16:33:12.8873203-07:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\badship.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Resources\Models\Ships\badship_0.xml</Output>
+      <Time>2013-04-20T14:36:13.2595802-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\spaceship.x</Source>
+      <Importer>XImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Resources\Models\Ships\spaceship_0.xml</Output>
+      <Time>2013-04-26T14:11:30.345428-07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSixContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSixContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T13:41:18-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2013-01-28T14:49:07.6736812-08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

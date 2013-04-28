@@ -1,0 +1,11 @@
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\test.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\stars.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\badship.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\SpriteFont1.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\spaceship.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\CraterSix.exe
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\CraterSix.pdb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\CraterSix.csprojResolveAssemblyReference.cache
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\CraterSix.exe
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\CraterSix.pdb
