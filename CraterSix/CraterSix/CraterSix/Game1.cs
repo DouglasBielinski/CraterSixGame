@@ -53,8 +53,12 @@ namespace CraterSix
             rnd = new Random();
 
             graphics = new GraphicsDeviceManager(this);
+            
+            //this.graphics.PreferredBackBufferWidth = 1280;
+            //this.graphics.PreferredBackBufferHeight = 1040;
+
             this.graphics.PreferredBackBufferWidth = 1280;
-            this.graphics.PreferredBackBufferHeight = 1040;
+            this.graphics.PreferredBackBufferHeight = 720;
 
             this.graphics.IsFullScreen = true;
 
@@ -145,11 +149,11 @@ namespace CraterSix
                     Console.WriteLine("Game Time: " + gameTime.TotalGameTime.Seconds + "s");
 
                 // Translation
-                KeyboardState keyboardState = Keyboard.GetState();
-                if (keyboardState.IsKeyDown(Keys.Left))
-                    worldTranslation *= Matrix.CreateTranslation(-.01f, 0, 0);
-                if (keyboardState.IsKeyDown(Keys.Right))
-                    worldTranslation *= Matrix.CreateTranslation(.01f, 0, 0);
+                //KeyboardState keyboardState = Keyboard.GetState();
+                //if (keyboardState.IsKeyDown(Keys.Left))
+                //    worldTranslation *= Matrix.CreateTranslation(-.01f, 0, 0);
+                //if (keyboardState.IsKeyDown(Keys.Right))
+                //    worldTranslation *= Matrix.CreateTranslation(.01f, 0, 0);
                 // Rotation
                 worldRotation *= Matrix.CreateFromYawPitchRoll(
                     MathHelper.PiOver4 / 60,
@@ -256,7 +260,7 @@ namespace CraterSix
                 }
                 
                 //credit to us! wooh!
-                spriteBatch.DrawString(hudFont, ("Game by the CraterSix team: Douglas Bielinski, Edward Loza, Jaime Baylon, Tracey Steinman, and Onur Gunduz"), new Vector2(0, 1000), Color.Yellow, 0, Vector2.Zero, 1, SpriteEffects.None, 0.2f);
+                spriteBatch.DrawString(hudFont, ("Game by the CraterSix team: Douglas Bielinski, Edward Loza, Jaime Baylon, Tracey Steinman, and Onur Gunduz"), new Vector2(0, 700), Color.Yellow, 0, Vector2.Zero, 1, SpriteEffects.None, 0.2f);
             }//endwhile
         }
 

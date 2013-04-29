@@ -61,14 +61,16 @@ namespace CraterSix
 
                 if (firstModel)
                 {
-                    Vector3 position = new Vector3(0, 40, 0);
-                    Vector3 direction = new Vector3(0.00f, 0.05f, 0.0f);
+                    Vector3 positions = new Vector3(0, 40, 0);
+                    Vector3 directions = new Vector3(0.00f, 0.05f, 0.0f);
+                    Vector3 positionp = new Vector3(-4, 2, 0);
+                    Vector3 directionp = new Vector3(0.00f, 0.0f, 0.0f);
                     models.Add(new Enemy(
-                        Game.Content.Load<Model>(@"Resources\Models\Ships\flagship5"), position, direction, 0, 0, 0, Matrix.Identity, 1));
-                    position = new Vector3(-4, 2, 0);
-                    direction = new Vector3(0.00f, 0.00f, 0.0f);
+                       Game.Content.Load<Model>(@"Resources\Models\urf3"), new Vector3(-4, 2, 0), new Vector3(0.00f, 0.0f, 0.0f), 0, 0, 0, Matrix.Identity, 1));
                     models.Add(new Enemy(
-                       Game.Content.Load<Model>(@"Resources\Models\urf3"), position, direction, 0, 0, 0, Matrix.Identity, 1));
+                        Game.Content.Load<Model>(@"Resources\Models\Ships\flagship5"), new Vector3(0, 40, 0), new Vector3(0.00f, 0.05f, 0.0f), 0, 0, 0, Matrix.Identity, 1));
+                    
+                    
                     firstModel = false;
                 }
 
