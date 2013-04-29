@@ -68,6 +68,84 @@
       <Output>obj\x86\Debug\Resources\Models\Ships\spaceship_0.xml</Output>
       <Time>2013-04-26T14:11:30.345428-07:00</Time>
     </Item>
+    <Item>
+      <Source>Resources\Models\Ships\edship.fbx</Source>
+      <Name>Resources\Models\Ships\edship</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\documents\visual studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\edship.xnb</Output>
+      <Time>2013-04-28T16:37:14.6185777-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Resources\Models\Ships\edship_0.xml</Key>
+        <Value>2013-04-28T16:37:22.0350019-07:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\edship.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Resources\Models\Ships\edship_0.xml</Output>
+      <Time>2013-04-28T16:37:14.6185777-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\flagship5.fbx</Source>
+      <Name>Resources\Models\Ships\flagship5</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\documents\visual studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\flagship5.xnb</Output>
+      <Time>2013-04-28T17:32:09.199017-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Resources\Models\Ships\flagship5_0.xml</Key>
+        <Value>2013-04-28T17:32:16.9244588-07:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Resources\Models\Ships\flagship5.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Resources\Models\Ships\flagship5_0.xml</Output>
+      <Time>2013-04-28T17:32:09.199017-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\SplashPage2.png</Source>
+      <Name>Resources\SplashPage2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\SplashPage2.xnb</Output>
+      <Time>2013-04-28T21:20:12.6056746-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\Models\urf2.fbx</Source>
+      <Name>Resources\Models\urf2</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\urf2.xnb</Output>
+      <Time>2013-04-28T22:49:49.2312-07:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\Resources\Models\urf2_0.xml</Key>
+        <Value>2013-04-28T22:50:00.2308291-07:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>Resources\Models\urf2.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\Resources\Models\urf2_0.xml</Output>
+      <Time>2013-04-28T22:49:49.2312-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Resources\bartexture.png</Source>
+      <Name>Resources\bartexture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\bartexture.xnb</Output>
+      <Time>2013-04-28T23:57:18.8898272-07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

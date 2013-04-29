@@ -9,3 +9,8 @@ C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSi
 C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\CraterSix.exe
 C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\obj\x86\Debug\CraterSix.pdb
+C:\Users\Doug\documents\visual studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\edship.xnb
+C:\Users\Doug\documents\visual studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\Ships\flagship5.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\SplashPage2.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\urf2.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\bartexture.xnb

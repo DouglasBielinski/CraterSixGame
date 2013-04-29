@@ -17,6 +17,7 @@ namespace CraterSix
 
     public class Camera : Microsoft.Xna.Framework.GameComponent
     {
+
         //Camera matrices
         public Matrix view { get; protected set; }
         public Matrix projection { get; protected set; }
@@ -27,8 +28,10 @@ namespace CraterSix
         public Vector3 cameraUp;
 
         // Speed
-        float speed = 2;
-
+        public float speed = 0.01f;
+        float topSpeed = 0.07f;
+        public float afterburner = 0.0f;
+        float maxAfterburner = 5.0f;
         public Boolean mouseMovement = false;
         int buttonCooldown = 0;
         // Mouse stuff
@@ -83,15 +86,32 @@ namespace CraterSix
 
             // Move forward/backward
             if (Keyboard.GetState().IsKeyDown(Keys.W))
-                cameraPosition += cameraDirection * speed;
+                if (speed < topSpeed)
+                    speed += 0.002f;
+            if(speed>0.001f)
+                speed -= 0.001f;
+            cameraPosition += cameraDirection * speed;
             if (Keyboard.GetState().IsKeyDown(Keys.S))
-                cameraPosition -= cameraDirection * speed;
+                cameraPosition -= cameraDirection * topSpeed;
 
+            if (Keyboard.GetState().IsKeyDown(Keys.LeftShift))
+            {
+                if (afterburner > 0)
+                {
+                    if (speed < 1.4f)
+                    {
+                        speed += 0.003f;
+                    }
+                    afterburner -= 0.01f;
+                }
+            }
+            if (afterburner < maxAfterburner)
+                afterburner += 0.001f;
             // Move side to side
             if (Keyboard.GetState().IsKeyDown(Keys.Left))
-                cameraPosition += Vector3.Cross(cameraUp, cameraDirection) * speed;
+                cameraPosition += Vector3.Cross(cameraUp, cameraDirection) * topSpeed;
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
-                cameraPosition -= Vector3.Cross(cameraUp, cameraDirection) * speed;
+                cameraPosition -= Vector3.Cross(cameraUp, cameraDirection) * topSpeed;
 
             if (mouseMovement)
             {

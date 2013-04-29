@@ -13,19 +13,20 @@ namespace CraterSix
         float pitchAngle = 0;
         float rollAngle = 0;
         Vector3 direction;
-        Vector3 up;
 
         public Enemy(Model m)
             : base(m)
         {
         }
 
-        public Enemy(Model m, float yawAngle, float pitchAngle, float rollAngle)
+        public Enemy(Model m, Vector3 Position, Vector3 Direction, float yawAngle, float pitchAngle, float rollAngle)
             : base(m)
         {
+            world = Matrix.CreateTranslation(Position);
             this.yawAngle = yawAngle;
             this.pitchAngle = pitchAngle;
             this.rollAngle = rollAngle;
+            direction = Direction;
         }
 
         public override void Update()
