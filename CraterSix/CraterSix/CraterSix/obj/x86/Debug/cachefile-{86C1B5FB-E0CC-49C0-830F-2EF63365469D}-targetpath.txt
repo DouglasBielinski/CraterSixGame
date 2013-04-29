@@ -8,3 +8,7 @@ Content\Resources\Models\Ships\flagship5.xnb
 Content\Resources\SplashPage2.xnb
 Content\Resources\Models\urf2.xnb
 Content\Resources\bartexture.xnb
+Content\Resources\Models\urf3.xnb
+Content\Resources\Models\smallurf.xnb
+Content\Resources\Audio\MilkyWay.xnb
+Content\Resources\Audio\MilkyWay.wma

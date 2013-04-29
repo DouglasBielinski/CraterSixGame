@@ -14,3 +14,7 @@ C:\Users\Doug\documents\visual studio 2010\Projects\CraterSix\CraterSix\CraterSi
 C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\SplashPage2.xnb
 C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\urf2.xnb
 C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\bartexture.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\urf3.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Models\smallurf.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Audio\MilkyWay.xnb
+C:\Users\Doug\Documents\Visual Studio 2010\Projects\CraterSix\CraterSix\CraterSix\bin\x86\Debug\Content\Resources\Audio\MilkyWay.wma

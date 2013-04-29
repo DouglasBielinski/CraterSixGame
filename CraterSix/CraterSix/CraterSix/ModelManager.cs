@@ -64,17 +64,17 @@ namespace CraterSix
                     Vector3 position = new Vector3(0, 40, 0);
                     Vector3 direction = new Vector3(0.00f, 0.05f, 0.0f);
                     models.Add(new Enemy(
-                        Game.Content.Load<Model>(@"Resources\Models\Ships\flagship5"), position, direction, 0, 0, 0));
+                        Game.Content.Load<Model>(@"Resources\Models\Ships\flagship5"), position, direction, 0, 0, 0, Matrix.Identity, 1));
                     position = new Vector3(-4, 2, 0);
                     direction = new Vector3(0.00f, 0.00f, 0.0f);
                     models.Add(new Enemy(
-                       Game.Content.Load<Model>(@"Resources\Models\urf2"), position, direction, 0, 0, 0));
+                       Game.Content.Load<Model>(@"Resources\Models\urf3"), position, direction, 0, 0, 0, Matrix.Identity, 1));
                     firstModel = false;
                 }
 
                 if (gameTime.TotalGameTime.Milliseconds % 1000 == 0)
                     Console.WriteLine("Models Count: " + models.Count);
-            
+
             base.Update(gameTime);
         }
 

@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Collections;
 
 namespace CraterSix
 {
@@ -39,6 +40,9 @@ namespace CraterSix
         SpriteFont hudFont;
         ModelManager modelManager;
         public Random rnd { get; protected set; }
+
+        Song milkyWay;
+        ArrayList music = new ArrayList();
 
         BasicEffect effect;
         Matrix worldTranslation = Matrix.Identity;
@@ -93,6 +97,9 @@ namespace CraterSix
             splashscreen = Content.Load<Texture2D>(@"Resources\SplashPage2");
             bartexture = Content.Load<Texture2D>(@"Resources\bartexture");
 
+            milkyWay = Content.Load<Song>(@"Resources\Audio\MilkyWay");
+            music.Add(milkyWay);
+
             // Initialize the BasicEffect
             effect = new BasicEffect(GraphicsDevice);
 
@@ -121,6 +128,14 @@ namespace CraterSix
             // Allows the game to exit
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
+
+            //if no music playing, play some music
+            if (MediaPlayer.State.Equals(MediaState.Stopped))
+            {
+                Song currentSong = (Song)music[0];
+                MediaPlayer.Play(currentSong);
+                //songstart = true;
+            }
 
             if (gameState == 0)
                 Console.WriteLine("Menu screen");
@@ -264,6 +279,7 @@ namespace CraterSix
                 " " + MathHelper.ToDegrees(camera.cameraDirection.Z)), new Vector2(0, 100), Color.Yellow);
             spriteBatch.DrawString(hudFont, ("Speed: "+ camera.speed), new Vector2(0, 120), Color.Yellow);
             spriteBatch.DrawString(hudFont, ("Afterburner: " + camera.afterburner), new Vector2(0, 140), Color.Cyan);
+            spriteBatch.DrawString(hudFont, ("Music: " + MediaPlayer.State), new Vector2(0, 160), Color.Green);
 
             //speed bar
             Rectangle speedbar = new Rectangle(1100, 300, 10, (int)(camera.speed * 10000));

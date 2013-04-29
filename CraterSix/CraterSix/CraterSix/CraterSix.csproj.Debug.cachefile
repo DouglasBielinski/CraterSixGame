@@ -3,12 +3,13 @@ Content\Resources\stars.xnb
 Content\Resources\Models\Ships\badship.xnb
 Content\SpriteFont1.xnb
 Content\Resources\Models\Ships\spaceship.xnb
-Content\Resources\Models\Ships\flagship.xnb
 Content\Resources\Models\Ships\edship.xnb
-Content\Resources\Models\Ships\flagship3.xnb
-Content\Resources\Models\Ships\flagship4.xnb
 Content\Resources\Models\Ships\flagship5.xnb
 Content\Resources\SplashPage2.xnb
-Content\Resources\Models\urf.xnb
 Content\Resources\Models\urf2.xnb
 Content\Resources\bartexture.xnb
+Content\Resources\Models\urf3.xnb
+Content\Resources\Models\smallurf.xnb
+Content\Resources\Audio\MilkyWay.xnb
+Content\Resources\Models\Ships\flagship6.xnb
+Content\Resources\Audio\MilkyWay.wma
